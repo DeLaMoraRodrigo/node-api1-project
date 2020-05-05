@@ -25,6 +25,7 @@ const AddUser = props => {
                      ...props.users,
                      res.data
                  ])
+                 setAddInputs(initialState)
              })
              .catch(err => {
                  console.log({ err })
@@ -36,12 +37,14 @@ const AddUser = props => {
             <input 
                 name="name"
                 type="text"
+                placeholder="Name"
                 value={addInputs.name}
                 onChange={handleChange}
             />
             <input 
                 name="bio"
                 type="text"
+                placeholder="Bio"
                 value={addInputs.bio}
                 onChange={handleChange}
             />
